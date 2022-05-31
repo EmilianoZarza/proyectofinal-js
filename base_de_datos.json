@@ -1,0 +1,128 @@
+[
+    {
+        "id": 1,
+        "nombre": "Papa",
+        "precio": 200,
+        "imagen":"images/papa.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Cebolla",
+        "precio": 150,
+        "imagen": "images/cebolla.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Palta",
+        "precio": 300,
+        "imagen": "images/palta.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Zanahoria",
+        "precio": 500,
+        "imagen": "images/zanahoria.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Zapallo",
+        "precio": 500,
+        "imagen": "images/zapallo.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Tomate",
+        "precio": 500,
+        "imagen": "images/tomate.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Pimientos",
+        "precio": 500,
+        "imagen": "images/pimientos.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Lechuga",
+        "precio": 500,
+        "imagen": "images/lechuga.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Pepino",
+        "precio": 500,
+        "imagen": "images/pepino.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Ajo",
+        "precio": 500,
+        "imagen": "images/ajo.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Perejil",
+        "precio": 500,
+        "imagen": "images/perejil.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "Choclo",
+        "precio": 500,
+        "imagen": "images/choclo.jpg"
+    },
+    {
+        "id": 13,
+        "nombre": "Acelga",
+        "precio": 500,
+        "imagen": "images/acelga.jpg"
+    },
+    {
+        "id": 14,
+        "nombre": "Frutillas",
+        "precio": 500,
+        "imagen": "images/frutilla.jpg"
+    },
+    {
+        "id": 15,
+        "nombre": "Banana",
+        "precio": 500,
+        "imagen": "images/banana.jpg"
+    },
+    {
+        "id": 16,
+        "nombre": "Manzana",
+        "precio": 500,
+        "imagen": "images/manzana.jpg"
+    },
+    {
+        "id": 17,
+        "nombre": "Pera",
+        "precio": 500,
+        "imagen": "images/pera.jpg"
+    },
+    {
+        "id": 18,
+        "nombre": "Naranja",
+        "precio": 500,
+        "imagen": "images/naranja.jpg"
+    },
+    {
+        "id": 19,
+        "nombre": "Mandarina",
+        "precio": 500,
+        "imagen": "images/mandarina.jpg"
+    },
+    {
+        "id": 20,
+        "nombre": "Ciruela",
+        "precio": 500,
+        "imagen": "images/ciruela.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Sandia",
+        "precio": 500,
+        "imagen": "images/sandia.jpg"
+    }
+]
