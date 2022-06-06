@@ -25,7 +25,7 @@
     },
     {
         "id": 5,
-        "nombre": "Zapallo",
+        "nombre": "Pimientos",
         "precio": 500,
         "imagen": "images/zapallo.jpg"
     },
@@ -37,7 +37,7 @@
     },
     {
         "id": 7,
-        "nombre": "Pimientos",
+        "nombre": "Zapallo",
         "precio": 500,
         "imagen": "images/pimientos.jpg"
     },
