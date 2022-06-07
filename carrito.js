@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     */
     function renderizarProductos() {
 
-        fetch("/base_de_datos.json")
+        fetch("base_de_datos.json")
         .then(response => response.json())
         .then(baseDeDatos => {
             baseDeDatos.forEach((info) => {
