@@ -1,5 +1,134 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const baseDeDatos =[
+        {
+            id: 1,
+            nombre: 'Papa',
+            precio: 200,
+            imagen:'images/papa.jpg'
+        },
+        {
+            id: 2,
+            nombre: 'Cebolla',
+            precio: 150,
+            imagen: 'images/cebolla.jpg'
+        },
+        {
+            id: 3,
+            nombre: 'Palta',
+            precio: 300,
+            imagen: 'images/palta.jpg'
+        },
+        {
+            id: 4,
+            nombre: 'Zanahoria',
+            precio: 170,
+            imagen: 'images/zanahoria.jpg'
+        },
+        {
+            id: 5,
+            nombre: 'Pimientos',
+            precio: 650,
+            imagen: 'images/zapallo.jpg'
+        },
+        {
+            id: 6,
+            nombre: 'Tomate',
+            precio: 130,
+            imagen: 'images/tomate.jpg'
+        },
+        {
+            id: 7,
+            nombre: 'Zapallo',
+            precio: 110,
+            imagen: 'images/pimientos.jpg'
+        },
+        {
+            id: 8,
+            nombre: 'Lechuga',
+            precio: 160,
+            imagen: 'images/lechuga.jpg'
+        },
+        {
+            id: 9,
+            nombre: 'Pepino',
+            precio: 450,
+            imagen: 'images/pepino.jpg'
+        },
+        {
+            id: 10,
+            nombre: 'Ajo',
+            precio: 900,
+            imagen: 'images/ajo.jpg'
+        },
+        {
+            id: 11,
+            nombre:'Perejil',
+            precio: 460,
+            imagen: 'images/perejil.jpg'
+        },
+        {
+            id: 12,
+            nombre: 'Choclo',
+            precio: 230,
+            imagen: 'images/choclo.jpg'
+        },
+        {
+            id: 13,
+            nombre: 'Acelga',
+            precio: 210,
+            imagen: 'images/acelga.jpg'
+        },
+        {
+            id: 14,
+            nombre: 'Frutillas',
+            precio: 500,
+            imagen: 'images/frutilla.jpg'
+        },
+        {
+            id: 15,
+            nombre: 'Banana',
+            precio: 220,
+            imagen: 'images/banana.jpg'
+        },
+        {
+            id: 16,
+            nombre: 'Manzana',
+            precio: 220,
+            imagen: 'images/manzana.jpg'
+        },
+        {
+            id: 17,
+            nombre: 'Pera',
+            precio: 220,
+            imagen: 'images/pera.jpg'
+        },
+        {
+            id: 18,
+            nombre: 'Naranja',
+            precio: 170,
+            imagen: 'images/naranja.jpg'
+        },
+        {
+            "id": 19,
+            "nombre": "Mandarina",
+            "precio": 170,
+            "imagen": "images/mandarina.jpg"
+        },
+        {
+            id: 20,
+            nombre: 'Ciruela',
+            precio: 320,
+            imagen: 'images/ciruela.jpg'
+        },
+        {
+            id: 4,
+            nombre: 'Sandia',
+            precio: 110,
+            imagen: 'images/sandia.jpg'
+        }
+    ]
+
     let carrito = [];
     const divisa = '$';
     const DOMitems = document.querySelector('#items');
@@ -12,46 +141,43 @@ document.addEventListener('DOMContentLoaded', () => {
     /**
     * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
     */
+    
     function renderizarProductos() {
-
-        fetch("/base_de_datos.json")
-        .then(response => response.json())
-        .then(baseDeDatos => {
-            baseDeDatos.forEach((info) => {
-                // Estructura
-                const miNodo = document.createElement('div');
-                miNodo.classList.add('card', 'col-sm-4');
-                // Body
-                const miNodoCardBody = document.createElement('div');
-                miNodoCardBody.classList.add('card-body');
-                // Titulo
-                const miNodoTitle = document.createElement('h5');
-                miNodoTitle.classList.add('card-title');
-                miNodoTitle.textContent = info.nombre;
-                // Imagen
-                const miNodoImagen = document.createElement('img');
-                miNodoImagen.classList.add('img-fluid');
-                miNodoImagen.setAttribute('src', info.imagen);
-                // Precio
-                const miNodoPrecio = document.createElement('p');
-                miNodoPrecio.classList.add('card-text');
-                miNodoPrecio.textContent = `${divisa}${info.precio}`;
-                // Boton 
-                const miNodoBoton = document.createElement('button');
-                miNodoBoton.classList.add('btn', 'btn-primary');
-                miNodoBoton.textContent = '+';
-                miNodoBoton.setAttribute('marcador', info.id);
-                miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-                // Insertamos
-                miNodoCardBody.appendChild(miNodoImagen);
-                miNodoCardBody.appendChild(miNodoTitle);
-                miNodoCardBody.appendChild(miNodoPrecio);
-                miNodoCardBody.appendChild(miNodoBoton);
-                miNodo.appendChild(miNodoCardBody);
-                DOMitems.appendChild(miNodo);
-            });
+        baseDeDatos.forEach((info) => {
+            // Estructura
+            const miNodo = document.createElement('div');
+            miNodo.classList.add('card', 'col-sm-4');
+            // Body
+            const miNodoCardBody = document.createElement('div');
+            miNodoCardBody.classList.add('card-body');
+            // Titulo
+            const miNodoTitle = document.createElement('h5');
+            miNodoTitle.classList.add('card-title');
+            miNodoTitle.textContent = info.nombre;
+            // Imagen
+            const miNodoImagen = document.createElement('img');
+            miNodoImagen.classList.add('img-fluid');
+            miNodoImagen.setAttribute('src', info.imagen);
+            // Precio
+            const miNodoPrecio = document.createElement('p');
+            miNodoPrecio.classList.add('card-text');
+            miNodoPrecio.textContent = `${divisa}${info.precio}`;
+            // Boton 
+            const miNodoBoton = document.createElement('button');
+            miNodoBoton.classList.add('btn', 'btn-primary');
+            miNodoBoton.textContent = '+';
+            miNodoBoton.setAttribute('marcador', info.id);
+            miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+            // Insertamos
+            miNodoCardBody.appendChild(miNodoImagen);
+            miNodoCardBody.appendChild(miNodoTitle);
+            miNodoCardBody.appendChild(miNodoPrecio);
+            miNodoCardBody.appendChild(miNodoBoton);
+            miNodo.appendChild(miNodoCardBody);
+            DOMitems.appendChild(miNodo);
         });
-    }
+    };
+
     
     /**
     * Evento para añadir un producto al carrito de la compra
